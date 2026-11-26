@@ -20,6 +20,12 @@ Add this entry under `mcpServers` in Claude Desktop's config, then restart Claud
 }
 ```
 
+`claude_config.py` can add or remove that entry for you. Run it with the project environment's Python, and it fills in the right absolute paths. It refuses to touch a config that isn't valid JSON, and it leaves other entries alone:
+
+```bash
+.venv/bin/python spikes/passthrough/claude_config.py add      # or: remove
+```
+
 Then ask Claude something like "Use the trustlayer-spike tools to list the files in the workspace and read notes/release.md."
 
 Every message is logged to `spikes/passthrough/spike.log`, which git ignores. Tool calls show up as lines with `TOOL CALL`:

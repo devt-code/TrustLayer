@@ -11,7 +11,7 @@ from html import escape
 from pathlib import Path
 from typing import Any
 
-REPO_URL = "https://github.com/devt-code/trustlayer"
+REPO_URL = "https://github.com/devt-code/TrustLayer"
 
 LEDE = (
     "TrustLayer is an open-source security gateway for AI agents. Every scenario below runs "

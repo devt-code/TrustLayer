@@ -6,7 +6,7 @@ It assumes the agent will sometimes be fooled by a prompt injection. Its main jo
 
 **Status: foundations and baseline.** The decision core exists as a skeleton that allows everything, so every attack in the benchmark currently works. That is deliberate: it is the measured starting line that each defense will be compared against. See the [roadmap](docs/PLAN.md#11-roadmap).
 
-**Results:** https://devt-code.github.io/trustlayer/
+**Results:** https://devt-code.github.io/TrustLayer/
 
 ## Try it
 

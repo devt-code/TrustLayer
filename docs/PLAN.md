@@ -334,7 +334,7 @@ Each stage adds at most one new outside service. Each stage ends with CI passing
 ## 13. Decisions
 
 - **Name and places:**
-  - TrustLayer, in the repository `devt-code/trustlayer`, public from day 1.
+  - TrustLayer, in the repository `devt-code/TrustLayer`, public from day 1. The results site is https://devt-code.github.io/TrustLayer/ (GitHub Pages addresses are case-sensitive).
   - The package is `mcp-trustlayer` and the command is `trustlayer`.
 - **Stack:**
   - Python 3.12 with uv; FastMCP, Pydantic, FastAPI and SQLite.

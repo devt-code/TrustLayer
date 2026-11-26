@@ -1,0 +1,11 @@
+id: normal-python-docs-lookup
+kind: normal
+title: Look something up in the Python docs
+prompt: How do I pretty-print JSON in Python? Check the official docs.
+steps:
+  - id: docs
+    tool: web.fetch
+    args: {url: "https://docs.python.org/3/library/json.html"}
+answer: "From the docs: {{ docs | slice:0:200 }}"
+expect:
+  - answer_contains: "json.dumps(obj, indent=2)"

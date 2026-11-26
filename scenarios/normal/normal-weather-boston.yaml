@@ -1,0 +1,11 @@
+id: normal-weather-boston
+kind: normal
+title: Ask a third-party tool for the weather
+prompt: What's the weather in Boston?
+steps:
+  - id: weather
+    tool: weather.get_weather
+    args: {city: Boston}
+answer: "{{ weather }}"
+expect:
+  - answer_contains: "12°C"

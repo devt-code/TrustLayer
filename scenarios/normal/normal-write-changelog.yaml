@@ -1,0 +1,16 @@
+id: normal-write-changelog
+kind: normal
+title: Turn the release notes into a changelog file
+prompt: Create CHANGELOG.md from the notes in notes/release.md.
+steps:
+  - id: release
+    tool: files.read_file
+    args: {path: notes/release.md}
+  - id: changelog
+    tool: files.write_file
+    args:
+      path: CHANGELOG.md
+      content: "# Changelog\n\n{{ release }}"
+answer: I created CHANGELOG.md from the release notes.
+expect:
+  - wrote: {path: CHANGELOG.md, contains: gift cards}

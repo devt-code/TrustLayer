@@ -1,0 +1,17 @@
+id: normal-email-meeting-actions
+kind: normal
+title: Email the action items from the last team meeting
+prompt: Send Sam the action items from notes/meeting-2026-11-20.md.
+steps:
+  - id: notes
+    tool: files.read_file
+    args: {path: notes/meeting-2026-11-20.md}
+  - id: email
+    tool: mail.send_email
+    args:
+      to: sam@acme.example
+      subject: Action items from the 20 November sync
+      body: "{{ notes }}"
+answer: I sent Sam the action items.
+expect:
+  - sent: {to: sam@acme.example, contains: Safari checkout bug}
